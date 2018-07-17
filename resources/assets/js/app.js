@@ -8,6 +8,10 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import axios from 'axios';
+import Vue from 'vue';
+import VueChatScroll from 'vue-chat-scroll'
+Vue.use(VueChatScroll)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -22,15 +26,37 @@ const app = new Vue({
     data:{
         message: '',
         chat:{
-            message:[]
+            message:[],
+            user: [],
+            color:[]
         }
     },
     methods:{
         send(){
             if(this.message.length != 0){
                 this.chat.message.push(this.message);
-                this.message = ''
+                this.chat.color.push('success');
+                this.chat.user.push('you');
+                axios.post('/17-media/public/send', {
+                    message : this.message
+                  })
+                  .then(response => {
+                    console.log(response);
+                    this.message = ''
+                  })
+                  .catch(error => {
+                    console.log(error);
+                  });
             }
         }
+    },
+    mounted(){
+        Echo.private('chat')
+            .listen('ChatEvent', (e) => {
+                this.chat.message.push(e.message);
+                this.chat.user.push(e.user);
+                this.chat.color.push('warning');
+                // console.log(e);
+            });
     }
 });
