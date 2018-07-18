@@ -1,5 +1,6 @@
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    {{-- <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav"> --}}
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav" style="background:pink;">
         <div class="container">
           <a class="navbar-brand js-scroll-trigger" href="#page-top">17-media</a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,10 +9,10 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about">Live broadcast</a>
+                <a class="nav-link js-scroll-trigger" href="{{ route('chat') }}">Live broadcast</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{{ route('login') }}">Services</a>
+                <a class="nav-link js-scroll-trigger" href="{{ route('login') }}">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>

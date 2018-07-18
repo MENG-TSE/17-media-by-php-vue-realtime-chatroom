@@ -24,6 +24,8 @@
     <!-- Custom styles for this template -->
     <link href="{{asset('assets/css/creative.min.css') }}" rel="stylesheet">
 
+    
+
   </head>
 
   <body>
