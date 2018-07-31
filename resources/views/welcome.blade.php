@@ -1,8 +1,9 @@
 @extends('layouts.master')
 @section('content')
   <body id="page-top">
-    <header class="masthead text-center text-white d-flex">
-      <div class="container my-auto">
+    <div></div>
+    <header class="masthead text-center text-white d-flex" style="height:80%;min-height:600px;">
+      <div class="container my-auto" >
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h1 class="text-uppercase">
@@ -17,6 +18,7 @@
         </div>
       </div>
     </header>
+    </div>
 
 
 
@@ -25,7 +27,7 @@
       <div class="container-fluid p-0">
         <div class="row no-gutters popup-gallery">
           @foreach($anchors as $anchor)
-          <div class="col-lg-2 col-sm-6">
+          <div class="col-lg-2 col-sm-6 t">
             <a class="portfolio-box" href="{{ route('singleAnchor', $anchor->id) }}">
               <img class="img-fluid" src="{{ asset($anchor->thumbnail1) }}" alt="">
               <div class="portfolio-box-caption">
