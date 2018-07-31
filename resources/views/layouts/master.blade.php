@@ -25,6 +25,9 @@
     <link href="{{asset('assets/css/creative.min.css') }}" rel="stylesheet">
 
     
+    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/simple-line-icons/css/simple-line-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/font-awesome/css/fontawesome-all.min.css') }}">
+   
 
   </head>
 
@@ -35,7 +38,7 @@
 
   <hr>
  
-    <!--footer-->
+    {{-- <!--footer-->
   <footer>
     <div class="container">
       <div class="row">
@@ -70,7 +73,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> --}}
 
 
       <!-- Bootstrap core JavaScript -->
