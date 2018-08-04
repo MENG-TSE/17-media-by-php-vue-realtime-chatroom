@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class YoutuberController extends Controller
 {
-    public function __connstract()
+    public function __construct()
     {
         $this->middleware('checkRole:youtuber');
         $this->middleware('auth');
